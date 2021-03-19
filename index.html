@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>PWA resize background bug</title>
+    <style>
+      body {
+        background: red;
+      }
+
+      @media (max-width: 959px) {
+        body {
+          background: blue;
+        }
+      }
+
+      #message {
+        background: white;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h1>Steps to reproduce:</h1>
+      <ol>
+        <li>Install this page as a PWA</li>
+        <li>Resize the window that opens right after installation</li>
+        <li>
+          You should see the entire window turning either red or blue depending
+          on the size of the window
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>
